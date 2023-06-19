@@ -1,6 +1,10 @@
 <h1>{{ post.title }}</h1>
 <p>{{ post.content }}</p>
 
+<a href="{% url 'post_create' %}" class="btn btn-primary">Create New Post</a>
+
+<a href="{% url 'post_list' %}" class="btn btn-primary">Back to List</a>
+
 <h2>Comments</h2>
 <ul>
     {% for comment in comments %}
