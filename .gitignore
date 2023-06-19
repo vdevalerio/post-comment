@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyz
+*.pywz
+*.swp
+
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+media/
+staticfiles/
+local_settings.py
+
+# Virtual environment
+venv/
+.venv/
+env/
+ENV/
+
+# Database
+*.sqlite3
+*.db
+
+# Miscellaneous
+*.bak
+*.swp
+.DS_Store
