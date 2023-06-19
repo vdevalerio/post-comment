@@ -10,6 +10,9 @@
       <h3 class="card-title">{{ post.title }}</h3>
       <p class="card-text">{{ post.content }}</p>
     </div>
+    <div class="card-footer">
+      <p class="card-info">{{ post.comments.count }} comments • {{ post.created_at|timesince }} ago</p>
+    </div>
   </a>
   {% empty %}
     <p>No posts available.</p>
