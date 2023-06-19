@@ -1,3 +1,50 @@
+.title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.subtitle-1 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.subtitle-2 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.post-content {
+  text-align: justify;
+  text-indent: 2em;
+  margin: 20px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.button-container {
+  text-align: right;
+  margin: 0px 20px 20px 0px;
+}
+
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -42,4 +89,22 @@
   font-size: 14px;
   color: #888;
   margin-top: 5px;
+}
+
+.comment-content {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+#id_content {
+  width: 95%;
+  padding: 5px;
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+label[for="id_content"] {
+  margin: 20px;
 }

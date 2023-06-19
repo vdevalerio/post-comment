@@ -1,22 +1,36 @@
-<h1>{{ post.title }}</h1>
-<p>{{ post.content }}</p>
+{% load static %}
 
-<a href="{% url 'post_create' %}" class="btn btn-primary">Create New Post</a>
+<h1 class="title">{{ post.title }}</h1>
+<div class="post-content">
+    <p>{{ post.content }}</p>
+</div>
 
-<a href="{% url 'post_list' %}" class="btn btn-primary">Back to List</a>
+<div class="button-container">
+   <a href="{% url 'post_list' %}" class="button">Back to List</a>
+   <a href="{% url 'post_create' %}" class="button">New Post</a>
+</div>
 
-<h2>Comments</h2>
-<ul>
+<h2 class="subtitle-1">Comments</h2>
+
+<div>
     {% for comment in comments %}
-        <li>{{ comment.content }}</li>
+      <div>
+        <p>Anonymous user commented {{ comment.created_at|timesince }} ago</p>
+        <p class="comment-content post-content">{{ comment.content }}</p>
+      </div>
     {% empty %}
-        <li>No comments yet.</li>
+      <p>No comments yet.</p>
     {% endfor %}
-</ul>
+</div>
 
-<h2>Add a Comment</h2>
+<h2 class="subtitle-2">Add a Comment</h2>
 <form method="POST">
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Submit</button>
+    {{ form.content.label_tag }}
+    {{ form.content }}
+    <div class="button-container">
+        <button class="button" type="submit">Submit</button>
+    </div>
 </form>
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
