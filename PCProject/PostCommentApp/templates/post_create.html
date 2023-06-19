@@ -1,7 +1,23 @@
-<h1>Create a New Post</h1>
+{% load static %}
+
+<div class="button-container">
+  <h1 class="title">Create a New Post</h1>
+  <a href="{% url 'post_list' %}" class="button">Back to List</a>
+</div>
 
 <form method="POST">
   {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Submit</button>
+  <div class="form-row">
+    <label for="{{ form.title.id_for_label }}">Title:</label>
+    {{ form.title }}
+  </div>
+  <div class="form-row">
+    <label for="{{ form.content.id_for_label }}">Content:</label>
+    {{ form.content }}
+  </div>
+  <div class="button-container">
+      <button class="button" type="submit">Submit</button>
+  </div>
 </form>
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
